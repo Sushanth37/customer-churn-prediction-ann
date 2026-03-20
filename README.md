@@ -1,25 +1,27 @@
-# Customer Churn Prediction using ANN
+# Customer Churn Prediction using ANN (Deep Learning)
 
-This project predicts whether a bank customer will churn or stay using an Artificial Neural Network (ANN).
+A deep learning-based project that predicts whether a bank customer is likely to churn or stay using an Artificial Neural Network (ANN). The project includes both model training in Jupyter Notebook and a Streamlit web application for real-time prediction.
 
 ## Project Overview
 
-This project was first developed in Jupyter Notebook for model training and then extended using Streamlit to create a simple frontend application for prediction.
+Customer churn prediction is important for banks because retaining existing customers is often more valuable than acquiring new ones. In this project, customer details are used to predict the probability of churn.
 
-The user enters customer details such as:
+The project workflow includes:
 
-- Credit Score
-- Age
-- Tenure
-- Balance
-- Number of Products
-- Credit Card Status
-- Active Member Status
-- Geography
-- Gender
-- Estimated Salary
+- data preprocessing
+- feature encoding
+- feature scaling
+- ANN model training
+- model saving
+- frontend development using Streamlit
 
-The application preprocesses the input, scales it using the saved scaler, and then uses the trained ANN model to predict the churn probability.
+## Features
+
+- Predicts whether a customer will churn or stay
+- Displays churn probability
+- Takes user input through a simple Streamlit interface
+- Uses saved trained ANN model and scaler
+- Converts categorical inputs into numerical format before prediction
 
 ## Technologies Used
 
@@ -29,24 +31,28 @@ The application preprocesses the input, scales it using the saved scaler, and th
 - NumPy
 - Scikit-learn
 - Streamlit
+- Jupyter Notebook
 
-## Files in the Project
+## Project Structure
 
-- `ChurnProject.ipynb` - notebook used for data preprocessing, training, and evaluation
-- `app.py` - Streamlit frontend application
-- `customer_churn_ann_model.h5` - saved trained ANN model
-- `scaler.pkl` - saved scaler object
-- `Churn_Modelling.csv` - dataset used for training/testing
+- `ChurnProject.ipynb` - notebook for preprocessing, training, and evaluation
+- `app.py` - Streamlit frontend for prediction
+- `customer_churn_ann_model.h5` - saved ANN model
+- `scaler.pkl` - saved scaler
+- `Churn_Modelling.csv` - dataset
+- `requirements.txt` - required Python packages
+- `README.md` - project documentation
+
+## How It Works
+
+1. User enters customer details in the Streamlit app
+2. Categorical values are converted into numerical features
+3. Input data is arranged in the same format used during training
+4. The saved scaler transforms the input values
+5. The ANN model predicts churn probability
+6. The app displays the final prediction
 
 ## How to Run the Project
-
-1. Clone the repository
-2. Open the project folder in VS Code
-3. Create and activate a virtual environment
-4. Install required packages
-5. Run the Streamlit app
-
-### Commands
 
 ```bash
 git clone https://github.com/Sushanth37/customer-churn-prediction-ann.git
